@@ -30,7 +30,7 @@ A blockchain-powered transportation management system built on Pi Network for ef
 - Driver earnings distribution
 
 ### Token Features
-- PAILOT token rewards
+- Token rewards
 - Performance-based bonuses
 - Token balance tracking
 - Transaction history
