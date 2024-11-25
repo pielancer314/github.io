@@ -1,0 +1,100 @@
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Custom hover effects */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Custom gradients */
+.gradient-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+}
+
+/* Custom shadows */
+.shadow-custom {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive text sizes */
+@media (max-width: 640px) {
+    .text-responsive {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 641px) {
+    .text-responsive {
+        font-size: 1.25rem;
+    }
+}
+
+/* Custom button styles */
+.btn-primary {
+    @apply bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-blue-600 transition-colors duration-300;
+}
+
+.btn-secondary {
+    @apply border-2 border-white text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-white hover:text-blue-500 transition-colors duration-300;
+}
+
+/* Custom form styles */
+.form-input {
+    @apply w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
+           focus:border-transparent outline-none transition-all duration-300;
+}
+
+/* Custom card styles */
+.feature-card {
+    @apply p-6 bg-gray-50 rounded-lg shadow-custom hover-scale;
+}
+
+/* Navigation styles */
+.nav-link {
+    @apply py-2 px-4 text-gray-500 hover:text-gray-700 transition-colors duration-300;
+}
+
+.nav-link-active {
+    @apply text-blue-500;
+}
+
+/* Section styles */
+.section {
+    @apply py-20;
+}
+
+.section-title {
+    @apply text-3xl font-bold text-center mb-12;
+}
+
+/* Container styles */
+.container-custom {
+    @apply max-w-6xl mx-auto px-4;
+}
+
+/* Footer styles */
+.footer-link {
+    @apply hover:text-gray-300 transition-colors duration-300;
+}
+
+/* Hero section styles */
+.hero-title {
+    @apply text-4xl font-bold text-white mb-4 animate-fadeIn;
+}
+
+.hero-subtitle {
+    @apply text-xl text-white mb-8 animate-fadeIn;
+}
