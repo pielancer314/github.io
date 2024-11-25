@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Transport Coop Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_KEY&libraries=places"></script>
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4">
+                            <span class="font-semibold text-gray-500 text-lg">Transport Coop</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="/app" class="btn-primary">Launch App</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="section gradient-primary">
+        <div class="container-custom text-center">
+            <h1 class="hero-title">
+                Blockchain-Powered Transportation Platform
+            </h1>
+            <p class="hero-subtitle">
+                Revolutionizing goods delivery in the Philippines with blockchain technology
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="btn-primary">
+                    Get Started
+                </a>
+                <a href="#learn-more" class="btn-secondary">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="section bg-white">
+        <div class="container-custom">
+            <h2 class="section-title">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-4">Real-time Tracking</h3>
+                    <p class="text-gray-600">Track your deliveries in real-time with our advanced GPS system</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-4">Pi Network Payments</h3>
+                    <p class="text-gray-600">Secure and fast payments using Pi cryptocurrency</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-4">Token Rewards</h3>
+                    <p class="text-gray-600">Earn tokens for completing deliveries and maintaining high ratings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Us</h2>
+            <div class="text-center max-w-3xl mx-auto">
+                <p class="text-gray-600 mb-8">
+                    We're building the future of transportation in the Philippines using blockchain technology.
+                    Our platform connects drivers with customers, ensuring secure and efficient delivery services.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section bg-white">
+        <div class="container-custom">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" name="name" class="form-input" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" name="email" class="form-input" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Message</label>
+                        <textarea name="message" class="form-input" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container-custom">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2023 Transport Coop. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
