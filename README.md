@@ -1,4 +1,4 @@
-# PailotPH Transport Platform
+# Blockchain Transport Coop Platform
 
 A blockchain-powered transportation management system built on Pi Network for efficient goods and services delivery in the Philippines.
 
@@ -6,7 +6,7 @@ A blockchain-powered transportation management system built on Pi Network for ef
 
 - 🚚 Real-time delivery tracking
 - 💰 Pi Network payment integration
-- 🎁 PAILOT token rewards system
+- 🎁 token rewards system
 - 📱 Mobile-first responsive design
 - 🗺️ Google Maps integration
 - 🔒 Secure blockchain transactions
