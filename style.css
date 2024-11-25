@@ -1,11 +1,17 @@
 /* Custom animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
 .animate-fadeIn {
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 1s ease-out;
 }
 
 /* Custom hover effects */
@@ -20,6 +26,7 @@
 /* Custom gradients */
 .gradient-primary {
     background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    color: white;
 }
 
 /* Custom shadows */
@@ -27,48 +34,34 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/* Responsive text sizes */
-@media (max-width: 640px) {
-    .text-responsive {
-        font-size: 1.125rem;
-    }
-}
-
-@media (min-width: 641px) {
-    .text-responsive {
-        font-size: 1.25rem;
-    }
-}
-
-/* Custom button styles */
-.btn-primary {
-    @apply bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold 
-           hover:bg-blue-600 transition-colors duration-300;
-}
-
-.btn-secondary {
-    @apply border-2 border-white text-white px-6 py-3 rounded-lg font-semibold 
-           hover:bg-white hover:text-blue-500 transition-colors duration-300;
-}
-
-/* Custom form styles */
-.form-input {
-    @apply w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
-           focus:border-transparent outline-none transition-all duration-300;
-}
-
-/* Custom card styles */
-.feature-card {
-    @apply p-6 bg-gray-50 rounded-lg shadow-custom hover-scale;
-}
-
 /* Navigation styles */
 .nav-link {
-    @apply py-2 px-4 text-gray-500 hover:text-gray-700 transition-colors duration-300;
+    @apply py-2 px-4 text-gray-500 hover:text-blue-500 transition-colors duration-300;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #3b82f6;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 .nav-link-active {
     @apply text-blue-500;
+}
+
+.nav-link-active::after {
+    width: 100%;
 }
 
 /* Section styles */
@@ -78,6 +71,7 @@
 
 .section-title {
     @apply text-3xl font-bold text-center mb-12;
+    animation: fadeIn 1s ease-out;
 }
 
 /* Container styles */
@@ -85,16 +79,120 @@
     @apply max-w-6xl mx-auto px-4;
 }
 
+/* Profile image styles */
+.profile-image-container {
+    animation: float 6s ease-in-out infinite;
+}
+
+.profile-image-container img {
+    border: 4px solid white;
+}
+
+/* Social links */
+.social-link {
+    @apply w-12 h-12 rounded-full bg-white text-blue-500 flex items-center justify-center text-xl 
+           hover:bg-blue-500 hover:text-white transition-all duration-300;
+}
+
+/* Project cards */
+.project-card {
+    @apply p-6 bg-white rounded-lg shadow-custom hover-scale;
+}
+
+.tech-tag {
+    @apply px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm;
+}
+
+.project-link {
+    @apply mt-4 inline-block text-blue-500 hover:text-blue-600 transition-colors duration-300;
+}
+
+/* Skill cards */
+.skill-card {
+    @apply p-6 bg-white rounded-lg shadow-custom text-center hover-scale;
+}
+
+.skill-card i {
+    @apply text-blue-500;
+}
+
+/* Form styles */
+.form-input {
+    @apply w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 
+           focus:border-transparent outline-none transition-all duration-300;
+}
+
+.btn-primary {
+    @apply bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold 
+           hover:bg-blue-600 transition-colors duration-300;
+}
+
 /* Footer styles */
 .footer-link {
-    @apply hover:text-gray-300 transition-colors duration-300;
+    @apply hover:text-blue-300 transition-colors duration-300;
 }
 
-/* Hero section styles */
-.hero-title {
-    @apply text-4xl font-bold text-white mb-4 animate-fadeIn;
+/* Responsive styles */
+@media (max-width: 640px) {
+    .section {
+        @apply py-12;
+    }
+
+    .section-title {
+        @apply text-2xl;
+    }
+
+    .hero-title {
+        @apply text-3xl;
+    }
+
+    .hero-subtitle {
+        @apply text-lg;
+    }
 }
 
-.hero-subtitle {
-    @apply text-xl text-white mb-8 animate-fadeIn;
+/* Notification styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+}
+
+.notification-success {
+    background: #10B981;
+    color: white;
+}
+
+.notification-error {
+    background: #EF4444;
+    color: white;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .project-card,
+    .skill-card {
+        @apply bg-gray-800 text-white;
+    }
+
+    .tech-tag {
+        @apply bg-blue-900 text-blue-200;
+    }
+
+    .text-gray-600 {
+        @apply text-gray-300;
+    }
+
+    .bg-white {
+        @apply bg-gray-900;
+    }
+
+    .text-gray-700 {
+        @apply text-gray-200;
+    }
 }
