@@ -16,28 +16,31 @@ A blockchain-powered transportation management system for efficient goods delive
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/transport-coop-platform.git
-cd transport-coop-platform
+git clone https://github.com/pielancer314/github.io.git
+cd github.io
 ```
 
-2. Set up environment variables:
-- Create a `.env` file in the root directory
-- Add the following variables:
-  ```
-  GOOGLE_MAPS_API_KEY=your_google_maps_api_key
-  PI_API_KEY=your_pi_network_api_key
-  MONGODB_URI=your_mongodb_connection_string
-  JWT_SECRET=your_jwt_secret
-  ```
-
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-4. Start the development server:
+3. Set up environment variables:
 ```bash
-npm run dev
+cp .env.example .env
+```
+
+4. Add your configuration:
+```env
+REACT_APP_PI_API_KEY=your_pi_api_key
+REACT_APP_TOKEN_ISSUER=your_token_issuer
+REACT_APP_TOKEN_CODE=PAILOT
+REACT_APP_GOOGLE_MAPS_KEY=your_google_maps_key
+```
+
+5. Start the development server:
+```bash
+npm start
 ```
 
 ## 💻 Tech Stack
@@ -92,9 +95,9 @@ Detailed API documentation is available at `/api/docs` when running the developm
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
 ## 📄 License
@@ -114,3 +117,5 @@ For support, please contact us at support@transportcoop.com or join our [Discord
 ---
 
 Made with ❤️ for the Philippine logistics community
+
+Project Link: [https://github.com/pielancer314/github.io](https://github.com/pielancer314/github.io)
